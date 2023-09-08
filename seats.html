@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookMyShow</title>
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <nav class="fnav">
+        <div class="left">
+            <i class="fa-solid fa-chevron-left" id="back"></i>
+            <div class="f-nav-name">
+                <p class="f-name-title">Jailer</p>
+                <p class="f-name-desc">KG-Cinemas:CBE | Tomorrow, 07 SEP, 10:20AM</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="n-ticket">
+                <a href="#popup1">
+                    <p><span class="num">2</span> Tickets</p>
+                </a>
+                <i class="fa-solid fa-pencil"></i>
+            </div>
+            <i class="fa-solid fa-xmark" id="cancel"></i>
+        </div>
+    </nav>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>How Many Seats?</h2>
+            <a class="close" href="#">&times;</a>
+            <img id="image1" src="Images/cycle.png" alt="Image 1">
+            <div class="numbers">
+                <p class="unselec" onclick="changeImage(1)">1</p>
+                <p class="selec" onclick="changeImage(2)">2</p>
+                <p class="unselec" onclick="changeImage(3)">3</p>
+                <p class="unselec" onclick="changeImage(4)">4</p>
+                <p class="unselec" onclick="changeImage(5)">5</p>
+            </div>
+            <div class="t-details">
+                <div class="t-topic">
+                    <p class="topic">RECLINER</p>
+                    <p class="price">RS.350.00</p>
+                    <p class="type">Sold Out</p>
+                </div>
+
+                <div class="t-topic">
+                    <p class="topic">GOLD</p>
+                    <p class="price">RS.250.00</p>
+                    <p class="type ff">Filling Fast</p>
+                </div>
+
+                <div class="t-topic">
+                    <p class="topic">LOUNGERS</p>
+                    <p class="price">RS.150.00</p>
+                    <p class="type ff">Filling Fast</p>
+                </div>
+            </div>
+
+            <button onclick="goto()">Select Seats</button>
+        </div>
+    </div>
+
+    <div id="popup3" class="overlay">
+        <div class="popup3-content">
+            <h2>Terms & Conditions</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content-details">
+                <p>1. Please follow the covid guidelines (As per the directions from your local authority)</p>
+                <p>2. Right of admission reserved.</p>
+                <p>3. Ticket is Compulsory for Children of 3 Years age & Above.</p>
+                <p>4. Please Carry ID Proof for movies Certified with ``A`` Certificate.</p>
+                <p>5. Once Ticket Purchased cannot be Cancelled or refunded.</p>
+                <p>6. Outside food and beverages are not allowed into the theatre premises.</p>
+                <p>7. Items like Laptops, Cameras, Lighters, Matchboxes, Cigarettes or any Inflammable objects are not
+                    allowed into the theatre premises.</p>
+                <p>8. Helmets, carry bags, eatables or handbags are not allowed into the theatres, please deposit at
+                    Baggage counter provided.</p>
+                <p>9. Only Online booking partner server messages are allowed.</p>
+                <p>10. Printout & forwarded messages are not allowed for both F&B as well as for movie tickets.</p>
+                <p>11. Please note that there would be an additional charge to wards 3D glasses, payable at the cinema
+                    box office for 3D movies``</p>
+                <p>12. Customers under the influence of alcohol will not be allowed inside the theater.</p>
+                <p>13.Children under the age of 18 years will not be permitted in the cinema for A rated movies.</p>
+            </div>
+            <div class="buttons">
+                <button onclick="goto()" class="cancel">Cancel</button>
+                <button class="accept" onclick="done()">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup2">
+        <div class="poup-container2">
+            <a href="#popup3"><button>Pay Rs.<span class="amount"></span> </button></a>
+            <!-- <button onclick="closePopup()">OK</button> -->
+        </div>
+    </div>
+
+    <nav class="snav">
+        <div class="tim">
+            <p>10:20 AM</p>
+            <p>Laser Dolby Atmos</p>
+        </div>
+        <div class="tim non">
+            <p>12:15 PM</p>
+            <p>Laser Dolby Atmos</p>
+        </div>
+        <div class="tim non">
+            <p>03:20 PM</p>
+            <p>Laser Dolby Atmos</p>
+        </div>
+        <div class="tim non">
+            <p>07:30 PM</p>
+            <p>Laser Dolby Atmos</p>
+        </div>
+    </nav>
+
+    <div class="seats-container">
+        <div class="rec">
+            <p>RECLINER-RS.350.00</p>
+            <hr>
+            <div class="seat-align">
+                <p>A</p>
+                <div class="seats">
+                    <div class="seat">1</div>
+                    <div class="seat">2</div>
+                    <div class="seat">3</div>
+                    <div class="seat good">4</div>
+                    <div class="seat good">5</div>
+                    <div class="seat good">6</div>
+                    <div class="seat occupied">7</div>
+                    <div class="seat">8</div>
+                    <div class="seat occupied">9</div>
+                    <div class="seat occupied">10</div>
+                    <div class="seat good">11</div>
+                    <div class="seat occupied">12</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gold">
+            <p>Gold-RS.350.00</p>
+            <hr>
+            <div class="seat-align">
+                <p>B</p>
+                <div class="seats">
+                    <div class="seat">1</div>
+                    <div class="seat">2</div>
+                    <div class="seat">3</div>
+                    <div class="seat">4</div>
+                    <div class="seat good">5</div>
+                    <div class="seat good">6</div>
+                    <div class="seat occupied">7</div>
+                    <div class="seat good">8</div>
+                    <div class="seat occupied">9</div>
+
+                    <div class="seat good">10</div>
+                    <div class="seat">11</div>
+                    <div class="seat">12</div>
+                    <div class="seat">13</div>
+                    <div class="seat">14</div>
+                    <div class="seat">15</div>
+                    <div class="seat occupied">16</div>
+                    <div class="seat">17</div>
+                    <div class="seat occupied">18</div>
+
+                    <div class="seat good">19</div>
+                    <div class="seat good">20</div>
+                    <div class="seat good">21</div>
+                    <div class="seat good">22</div>
+                    <div class="seat good">23</div>
+                    <div class="seat">24</div>
+                    <div class="seat occupied">25</div>
+                    <div class="seat">26</div>
+                    <div class="seat occupied">27</div>
+                </div>
+            </div>
+
+            <div class="seat-align">
+                <p>C</p>
+                <div class="seats">
+                    <div class="seat good">1</div>
+                    <div class="seat occupied">2</div>
+                    <div class="seat occupied">3</div>
+                    <div class="seat good">4</div>
+                    <div class="seat good">5</div>
+                    <div class="seat">6</div>
+                    <div class="seat">7</div>
+                    <div class="seat">8</div>
+                    <div class="seat">9</div>
+
+                    <div class="seat good">10</div>
+                    <div class="seat good">11</div>
+                    <div class="seat good">12</div>
+                    <div class="seat good">13</div>
+                    <div class="seat">14</div>
+                    <div class="seat">15</div>
+                    <div class="seat">16</div>
+                    <div class="seat">17</div>
+                    <div class="seat">18</div>
+
+                    <div class="seat good">19</div>
+                    <div class="seat">20</div>
+                    <div class="seat">21</div>
+                    <div class="seat">22</div>
+                    <div class="seat">23</div>
+                    <div class="seat">24</div>
+                    <div class="seat">25</div>
+                    <div class="seat">26</div>
+                    <div class="seat">27</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="normal">
+            <p>NORMAL-RS.250.00</p>
+            <hr>
+            <div class="seat-align">
+                <p>D</p>
+                <div class="seats">
+                    <div class="seat">1</div>
+                    <div class="seat">2</div>
+                    <div class="seat">3</div>
+                    <div class="seat good">4</div>
+                    <div class="seat good">5</div>
+                    <div class="seat">6</div>
+                    <div class="seat">7</div>
+                    <div class="seat occupied">8</div>
+                    <div class="seat occupied">9</div>
+
+                    <div class="seat">10</div>
+                    <div class="seat good">11</div>
+                    <div class="seat good">12</div>
+                    <div class="seat good">13</div>
+                    <div class="seat good">14</div>
+                    <div class="seat">15</div>
+                    <div class="seat">16</div>
+                    <div class="seat">17</div>
+                    <div class="seat">18</div>
+
+                    <div class="seat good">19</div>
+                    <div class="seat">20</div>
+                    <div class="seat">21</div>
+                    <div class="seat">22</div>
+                    <div class="seat good">23</div>
+                    <div class="seat good">24</div>
+                    <div class="seat good">25</div>
+                    <div class="seat">26</div>
+                    <div class="seat">27</div>
+                    <div class="seat">28</div>
+                    <div class="seat">29</div>
+                </div>
+            </div>
+
+            <div class="seat-align">
+                <p>E</p>
+                <div class="seats">
+                    <div class="seat">1</div>
+                    <div class="seat">2</div>
+                    <div class="seat">3</div>
+                    <div class="seat good">4</div>
+                    <div class="seat good">5</div>
+                    <div class="seat good">6</div>
+                    <div class="seat good">7</div>
+                    <div class="seat">8</div>
+                    <div class="seat">9</div>
+
+                    <div class="seat good">10</div>
+                    <div class="seat good">11</div>
+                    <div class="seat">12</div>
+                    <div class="seat">13</div>
+                    <div class="seat">14</div>
+                    <div class="seat">15</div>
+                    <div class="seat occupied">16</div>
+                    <div class="seat occupied">17</div>
+                    <div class="seat">18</div>
+
+                    <div class="seat">19</div>
+                    <div class="seat">20</div>
+                    <div class="seat">21</div>
+                    <div class="seat">22</div>
+                    <div class="seat">23</div>
+                    <div class="seat occupied">24</div>
+                    <div class="seat occupieds">25</div>
+                    <div class="seat">26</div>
+                    <div class="seat">27</div>
+                    <div class="seat">28</div>
+                    <div class="seat">29</div>
+                </div>
+            </div>
+
+            <div class="seat-align">
+                <p>F</p>
+                <div class="seats">
+                    <div class="seat">1</div>
+                    <div class="seat">2</div>
+                    <div class="seat">3</div>
+                    <div class="seat">4</div>
+                    <div class="seat">5</div>
+                    <div class="seat">6</div>
+                    <div class="seat    ">7</div>
+                    <div class="seat">8</div>
+                    <div class="seat">9</div>
+
+                    <div class="seat">10</div>
+                    <div class="seat">11</div>
+                    <div class="seat">12</div>
+                    <div class="seat">13</div>
+                    <div class="seat">14</div>
+                    <div class="seat occupied">15</div>
+                    <div class="seat occupied">16</div>
+                    <div class="seat occupied">17</div>
+                    <div class="seat occupied">18</div>
+
+                    <div class="seat">19</div>
+                    <div class="seat">20</div>
+                    <div class="seat">21</div>
+                    <div class="seat">22</div>
+                    <div class="seat">23</div>
+                    <div class="seat">24</div>
+                    <div class="seat">25</div>
+                    <div class="seat">26</div>
+                    <div class="seat">27</div>
+                    <div class="seat">28</div>
+                    <div class="seat">29</div>
+                </div>
+            </div>
+
+            <div class="seat-align">
+                <p>G</p>
+                <div class="seats">
+                    <div class="seat">1</div>
+                    <div class="seat">2</div>
+                    <div class="seat">3</div>
+                    <div class="seat">4</div>
+                    <div class="seat">5</div>
+                    <div class="seat">6</div>
+                    <div class="seat">7</div>
+                    <div class="seat">8</div>
+                    <div class="seat">9</div>
+
+                    <div class="seat">10</div>
+                    <div class="seat">11</div>
+                    <div class="seat">12</div>
+                    <div class="seat occupied">13</div>
+                    <div class="seat occupied">14</div>
+                    <div class="seat occupied">15</div>
+                    <div class="seat occupied">16</div>
+                    <div class="seat">17</div>
+                    <div class="seat">18</div>
+
+                    <div class="seat">19</div>
+                    <div class="seat">20</div>
+                    <div class="seat">21</div>
+                    <div class="seat">22</div>
+                    <div class="seat">23</div>
+                    <div class="seat">24</div>
+                    <div class="seat">25</div>
+                    <div class="seat">26</div>
+                    <div class="seat">27</div>
+                    <div class="seat">28</div>
+                    <div class="seat">29</div>
+                </div>
+            </div>
+
+            <div class="seat-align">
+                <p>H</p>
+                <div class="seats">
+                    <div class="seat">1</div>
+                    <div class="seat">2</div>
+                    <div class="seat">3</div>
+                    <div class="seat occupied">4</div>
+                    <div class="seat occupied">5</div>
+                    <div class="seat occupied">6</div>
+                    <div class="seat occupied">7</div>
+                    <div class="seat">8</div>
+                    <div class="seat">9</div>
+
+                    <div class="seat">10</div>
+                    <div class="seat">11</div>
+                    <div class="seat">12</div>
+                    <div class="seat">13</div>
+                    <div class="seat">14</div>
+                    <div class="seat">15</div>
+                    <div class="seat">16</div>
+                    <div class="seat">17</div>
+                    <div class="seat">18</div>
+
+                    <div class="seat good">19</div>
+                    <div class="seat">20</div>
+                    <div class="seat">21</div>
+                    <div class="seat">22</div>
+                    <div class="seat">23</div>
+                    <div class="seat">24</div>
+                    <div class="seat occupied">25</div>
+                    <div class="seat">26</div>
+                    <div class="seat occupied">27</div>
+                    <div class="seat occupied">28</div>
+                    <div class="seat">29</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gold">
+            <p>LOUNGERS-RS.150.00</p>
+            <hr>
+            <div class="seat-align">
+                <p>I</p>
+                <div class="seats">
+                    <div class="seat good">1</div>
+                    <div class="seat">2</div>
+                    <div class="seat">3</div>
+                    <div class="seat">4</div>
+                    <div class="seat">5</div>
+                    <div class="seat">6</div>
+                    <div class="seat occupied">7</div>
+                    <div class="seat">8</div>
+                    <div class="seat occupied">9</div>
+
+                    <div class="seat good">10</div>
+                    <div class="seat">11</div>
+                    <div class="seat">12</div>
+                    <div class="seat">13</div>
+                    <div class="seat">14</div>
+                    <div class="seat">15</div>
+                    <div class="seat occupied">16</div>
+                    <div class="seat">17</div>
+                    <div class="seat occupied">18</div>
+
+                    <div class="seat goodselected">19</div>
+                    <div class="seat">20</div>
+                    <div class="seat">21</div>
+                    <div class="seat">22</div>
+                    <div class="seat">23</div>
+                    <div class="seat">24</div>
+                    <div class="seat occupied">25</div>
+                    <div class="seat">26</div>
+                    <div class="seat occupied">27</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="screen-container">
+        <img src="Images/screen.png" alt="">
+        <p id="eys">All eyes this way please!</p>
+    </div>
+
+    <div class="catalouge">
+        <span class="bs"></span>
+        <p style="margin-right: 2px;">Bestseller</p>
+        <i class="fa-solid fa-circle-info"></i>
+        <span class="avai"></span>
+        <p>Available</p>
+        <span class="sel"></span>
+        <p>Selected</p>
+        <span class="sol"></span>
+        <p>Sold</p>
+    </div>
+    </div>
+    <script>
+        const backbutton = document.getElementById('back');
+
+        backbutton.addEventListener('click', () => {
+            window.location.href = 'booking.html';
+        });
+
+        numbers = document.querySelector('.numbers');
+        var descendents = numbers.childNodes;
+
+        numbers.addEventListener('click', (e) => {
+
+            for (var i = 0; i < descendents.length; i++) {
+                f = descendents[i];
+                f.classList = 'unselec';
+            }
+
+            if (!e.target.classList.contains('selec')) {
+                e.target.classList.toggle('selec');
+                count = document.querySelector('.selec').value;
+                console.log(count);
+            }
+        });
+
+        function goto() {
+            window.location.href = 'seats.html#'
+        }
+
+        var imageN = 2;
+        async function changeImage(imageNumber) {
+            var image = document.getElementById("image1");
+            var imageSources = [
+                "Images/cycle.png",
+                "Images/scooty.png",
+                "Images/auto.png",
+                "Images/scar.png",
+                "Images/bcar.png"
+            ];
+            image.src = imageSources[imageNumber - 1];
+
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            imageN = imageNumber;
+            var selec = document.querySelector('.num');
+            selec.innerHTML = imageNumber;
+        }
+
+        console.log(imageN);
+
+        var selectedSeatsCount = 0;
+
+        function handleSeatClick(seat) {
+            if (!seat.classList.contains('occupied') && !seat.classList.contains('selected')) {
+                if (selectedSeatsCount == imageN - 1) {
+                    showPopup()
+                }
+                if (selectedSeatsCount >= imageN) {
+                    return;
+                }
+                seat.classList.toggle('selected');
+                selectedSeatsCount++;
+            } else if (seat.classList.contains('selected')) {
+                seat.classList.remove('selected');
+                selectedSeatsCount--;
+            }
+        }
+
+
+        var seats = document.querySelectorAll('.seat');
+        seats.forEach(function (seat) {
+            seat.addEventListener('click', function () {
+                handleSeatClick(seat);
+            });
+        });
+
+        function showPopup() {
+
+            var amount = document.querySelector('.amount');
+            var total = imageN * 350;
+            amount.innerHTML = total;
+            var popup2 = document.querySelector(".popup2");
+            popup2.style.display = "flex";
+        }
+
+        function closePopup() {
+            var popup = document.getElementById("popup2");
+            popup2.style.display = "none";
+        }
+
+        const tims = document.querySelectorAll('.tim');
+
+        tims.forEach(function (tim) {
+
+            tim.addEventListener('click', () => {
+                window.location.href = 'seats.html';
+            })
+        });
+
+        function done()
+        {
+            window.alert("Ticket Booked Successfully");
+            window.location.href = 'seats.html'
+        }
+    </script>
+</body>
+
+</html>

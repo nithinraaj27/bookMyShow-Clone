@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookMyShow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <nav class="fnav">
+        <div class="left">
+            <img src="Images/logo.png" alt="">
+            <div class="input-cotainer">
+                <i class="fa-solid fa-magnifying-glass" style="color: gray;"></i>
+                <input type="text" name="" id="" placeholder="Search for Moviees, Events, Plays, Sports and Activities">
+            </div>
+        </div>
+        <div class="right">
+            <select id="location" name="location">
+                <option value="Pune">Pune</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Coimbatore">Coimbatore</option>
+            </select>
+            <button>Sign In</button>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <nav class="snav">
+        <div class="s-left">
+            <p>Movies</p>
+            <p>Stream</p>
+            <p>Events</p>
+            <p>Plays</p>
+            <p>Sports</p>
+            <p>Activities</p>
+            <p>Buzz</p>
+        </div>
+
+        <div class="s-right">
+            <p>ListYourShow</p>
+            <p>Corporates</p>
+            <p>Offers</p>
+            <p>Gift Cards</p>
+        </div>
+    </nav>
+
+    <div class="booking-top">
+        <div class="movie-title">
+            <p>Jailer - Tamil</p>
+        </div>
+        <div class="buttons">
+            <button class="ua">UA</button>
+            <button class="desc-button">ACTION</button>
+            <button class="desc-button">DRAMA</button>
+            <button class="desc-button">THRILLER</button>
+        </div>
+    </div>
+
+    <div class="cal-bar">
+        <div class="cal-left">
+            <i class="fa-solid fa-chevron-left" id="left-arrow"></i>
+            <div class="calendar"></div>
+            <i class="fa-solid fa-chevron-right" id="right-arrow"></i>
+        </div>
+        <div class="cal-right">
+            <div class="button">Tamil-2D</div>
+            <select class="price" id="Filter Price Range">
+                <option value="" disabled selected>Filter Price Range</option>
+                <option value="Rs.0 - 100">Rs.0 - 100</option>
+                <option value="Rs.101 - 200">Rs.101 - 200</option>
+                <option value="Rs.201 - 300">Rs.201 - 300</option>
+                <option value="Rs.300 - 700">Rs.300 - 700</option>
+            </select>
+
+            <form>
+                <div class="multiselect">
+                    <div class="selectBox" onclick="showCheckboxes()">
+                        <select>
+                            <option>Filter Show Timings</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+                    <div id="checkboxes">
+                        <label for="one" class="dp"><input type="checkbox" id="one" />Morning</label>
+                        <label for="two" class="dp"><input type="checkbox" id="two" />Afternoon</label>
+                        <label for="three" class="dp"><input type="checkbox" id="three" />Evening</label>
+                        <label for="four" class="dp"><input type="checkbox" id="four" />Night</label>
+                    </div>
+                </div>
+            </form>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+    <div class="desc-about">
+        <span class="avai"></span>
+        <p>AVAILABLE</p>
+        <span class="fast"></span>
+        <p>FAST FILLING</p>
+        <span class="lan">LAN</span>
+        <p>SUBTITLES LANGUAGE</p>
+    </div>
+
+    <div class="theatre-names">
+        <div class="theatre-left">
+            <i class="fa-regular fa-heart" id="heart"></i>
+            <div class="theatre-name">
+                <p>AAA Cinimas: CBE</p>
+                <div class="name-desc">
+                    <div class="m-t">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>M-Ticket</p>
+                    </div>
+                    <div class="f-b">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <p>Food & Beverage</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>Info</p>
+            </div>
+        </div>
+        <div class="theatre-right">
+            <div class="timings">
+                <div class="timing">
+                    <p>10:15 AM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+                <div class="timing">
+                    <p>01:15 PM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+                <div class="timing">
+                    <p>07:15 PM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+                <div class="timing">
+                    <p>10:15 PM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+            </div>
+            <span class="can"></span>
+            <p>Non-cancellable</p>
+        </div>
+    </div>
+
+    <div class="theatre-names">
+        <div class="theatre-left">
+            <i class="fa-regular fa-heart" id="heart"></i>
+            <div class="theatre-name">
+                <p>Karpagam Cinimas: CBE</p>
+                <div class="name-desc">
+                    <div class="m-t">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>M-Ticket</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>Info</p>
+            </div>
+        </div>
+        <div class="theatre-right">
+            <div class="timings">
+                <div class="timing">
+                    <p>10:15 AM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+                <div class="timing">
+                    <p>01:15 PM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+                <div class="timing">
+                    <p>07:15 PM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+                <div class="timing">
+                    <p>10:15 PM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+            </div>
+            <span class="can"></span>
+            <p>Non-cancellable</p>
+        </div>
+    </div>
+
+    <div class="theatre-names">
+        <div class="theatre-left">
+            <i class="fa-regular fa-heart" id="heart"></i>
+            <div class="theatre-name">
+                <p>KG Cinimas: CBE</p>
+                <div class="name-desc">
+                    <div class="m-t">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>M-Ticket</p>
+                    </div>
+                    <div class="f-b">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <p>Food & Beverage</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>Info</p>
+            </div>
+        </div>
+        <div class="theatre-right">
+            <div class="timings">
+                <div class="timing">
+                    <p>10:15 AM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+                <div class="timing">
+                    <p>01:15 PM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+                <div class="timing">
+                    <p>07:15 PM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+                <div class="timing">
+                    <p>10:15 PM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+            </div>
+            <span class="can"></span>
+            <p>Non-cancellable</p>
+        </div>
+    </div>
+
+    <div class="theatre-names">
+        <div class="theatre-left">
+            <i class="fa-regular fa-heart" id="heart"></i>
+            <div class="theatre-name">
+                <p>Govindam - Theatres</p>
+                <div class="name-desc">
+                    <div class="m-t">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>M-Ticket</p>
+                    </div>
+                    <div class="f-b">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <p>Food & Beverage</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>Info</p>
+            </div>
+        </div>
+        <div class="theatre-right">
+            <div class="timings">
+                <div class="timing">
+                    <p>10:15 AM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+            </div>
+            <span class="can"></span>
+            <p>Non-cancellable</p>
+        </div>
+    </div>
+
+    <div class="theatre-names">
+        <div class="theatre-left">
+            <i class="fa-regular fa-heart" id="heart"></i>
+            <div class="theatre-name">
+                <p>Gokulam Teatres: CBE</p>
+                <div class="name-desc">
+                    <div class="m-t">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>M-Ticket</p>
+                    </div>
+                    <div class="f-b">
+                        <i class="fa-solid fa-bowl-food"></i>
+                        <p>Food & Beverage</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>Info</p>
+            </div>
+        </div>
+        <div class="theatre-right">
+            <div class="timings">
+                <div class="timing">
+                    <p>10:15 AM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+                <div class="timing">
+                    <p>01:15 PM</p>
+                    <p>LASER DOLBY ATMOS</p>
+                </div>
+            </div>
+            <span class="can"></span>
+            <p>Non-cancellable</p>
+        </div>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('.moviee-list-item-img');
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+                window.location.href = 'booking.html'
+            });
+        });
+
+
+
+        var expanded = false;
+
+        function showCheckboxes() {
+            var checkboxes = document.getElementById("checkboxes");
+            if (!expanded) {
+                checkboxes.style.display = "block";
+                expanded = true;
+            } else {
+                checkboxes.style.display = "none";
+                expanded = false;
+            }
+        }
+
+        const bookings = document.querySelectorAll('.timing');
+
+        bookings.forEach((booking) => {
+            booking.addEventListener('click', () => {
+                window.location.href = 'seats.html'
+            });
+        })
+
+        const current = document.querySelector('.calendar');
+        var descendents = current.childNodes;
+
+        current.addEventListener('click', (e) => {
+
+            for (var i = 0; i < descendents.length; i++) {
+                f = descendents[i];
+                f.classList = 'days noncur'
+            }
+
+            if (!e.target.classList.contains('cur')) {
+                e.target.classList.toggle('cur');
+            }
+        })
+
+        var container = document.querySelector(".calendar");
+        var leftButton = document.getElementById("left-arrow");
+        var rightButton = document.getElementById("right-arrow");
+
+        var currentDate = new Date();
+
+        var months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEPT","OCT","NOV","DEC"];
+        var days = ["MON", "TUE", "WED", "THUR", "FRI", "SAT", "SUN"];
+
+        for (var i = 0; i < 20; i++) {
+
+            var newDiv = document.createElement("div");
+            
+            if (i === 0) {
+                newDiv.className = "days curr";
+            } else {
+                newDiv.className = "days noncur";
+            }
+
+            var day = document.createElement("p");
+            day.className = "day";
+            day.textContent = days[currentDate.getDay()]; 
+
+            var date = document.createElement("p");
+            date.className = "date";
+            date.textContent = currentDate.getDate(); 
+
+            var month = document.createElement("p");
+            month.className = "month";
+            month.textContent = months[currentDate.getMonth()]; 
+
+            newDiv.appendChild(day);
+            newDiv.appendChild(date);
+            newDiv.appendChild(month);
+
+            container.appendChild(newDiv);
+
+            currentDate.setDate(currentDate.getDate() + 1);
+        }
+
+        leftButton.addEventListener("click", function () {
+            container.scrollLeft -= 210; 
+        });
+
+        rightButton.addEventListener("click", function () {
+            container.scrollLeft += 210; 
+        });
+
+        var descendents = container.childNodes;
+
+        container.addEventListener('click', (e) => {
+
+            for (var i = 0; i < descendents.length; i++) {
+                f = descendents[i];
+                f.classList = 'days noncurr';
+            }
+
+            if (!e.target.classList.contains('days curr')) {
+                e.target.classList = 'days curr';
+                console.log(descendents);
+            }
+        })
+    </script>
+</body>
+
+</html>

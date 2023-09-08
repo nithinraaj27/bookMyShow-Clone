@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookMyShow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Get Started</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="button">
+                <img src="Images/google.png" alt="">
+                <p>Continue with Google</p>
+            </div>
+            <div class="button">
+                <img src="Images/email.png" alt="">
+                <p>Continue with Email</p>
+            </div> 
+            <div class="button">
+                <img src="Images/apple.png" alt="">
+                <p>Continue with Apple</p>
+            </div>  
+            <p>OR</p>
+            <div class="number">
+                <img src="Images/india.png" alt="">
+                <p>+91</p>
+                <input type="tel" placeholder="Continue with mobile number">
+            </div>
+            <div class="space"></div>
+            <p class="bottom">I agree to the <span>Terms & Conditions</span> and <span>Privacy Policy.</span></p>
+        </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <div class="top-div">
+            <p>Hey!</p>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+        <div class="bot-div">
+            <img src="Images/profile.png" alt="">
+            <p>Unlock special offers & great benefits</p>
+            <button>Login / Register</button>
+        </div>
+        <div class="container-data">
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-regular fa-bell"></i>
+                    <p style="color: black;">Notification</p>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="inner-desc">
+                        <p>Notification</p>
+                        <p class="desc">View all your bookings & purchases</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-solid fa-bag-shopping" style="color: black;"></i>
+                    <div class="inner-desc">
+                        <p style="color: black;">Your Orders</p>
+                        <p class="desc" style="color: black;">Rented & Purchased Moviees</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-solid fa-message"></i>
+                    <div class="inner-desc">
+                        <p>Play Credit Card</p>
+                        <p class="desc">View your play credit card details and offers</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <div class="inner-desc">
+                        <p>Help & support</p>
+                        <p class="desc">View Commonly asked queries and chat</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-solid fa-gift" style="color: black;"></i>
+                    <div class="inner-desc">
+                        <p style="color: black;">Reward</p>
+                        <p class="desc" style="color: black;">View your reward and Unlock new ones</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="inner-desc">
+                        <p>Account & Settings</p>
+                        <p class="desc">Locations, Payment, Permission & More</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <nav class="fnav">
+        <div class="left">
+            <img src="Images/logo.png" alt="">
+            <div class="input-cotainer">
+                <i class="fa-solid fa-magnifying-glass" style="color: gray;"></i>
+                <input type="text" name="" id="" placeholder="Search for Moviees, Events, Plays, Sports and Activities">
+            </div>
+        </div>
+        <div class="right">
+            <select id="location" name="location">
+                <option value="Pune">Pune</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Coimbatore">Coimbatore</option>
+            </select>
+            <button><a href="#popup1">Sign In</a></button>
+            <i class="fa-solid fa-bars" onclick="openNav()"></i>
+        </div>
+    </nav>
+
+    <nav class="snav">
+        <div class="s-left">
+            <p>Movies</p>
+            <p>Stream</p>
+            <p>Events</p>
+            <p>Plays</p>
+            <p>Sports</p>
+            <p>Activities</p>
+            <p>Buzz</p>
+        </div>
+
+        <div class="s-right">
+            <p>ListYourShow</p>
+            <p>Corporates</p>
+            <p>Offers</p>
+            <p>Gift Cards</p>
+        </div>
+    </nav>
+
+    <div class="banner-container">
+        <div class="banner-content">
+            <div class="banner-item"><img src="Images/b1.png" alt=""></div>
+            <div class="banner-item"><img src="Images/b2.png" alt=""></div>
+            <div class="banner-item"><img src="Images/b3.png" alt=""></div>
+        </div>
+        <div class="button-content">
+            <button class="scroll-button bleft" id="bleft"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="scroll-button bright" id="bright"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-container">
+            <div class="moviee-list-container">
+                <div class="moviee-list-title">
+                    NEW RELEASES
+                </div>
+                <div class="moviee-list-wrapper">
+                    <div class="moviee-list">
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m1.png" alt="">
+                            <span class="moviee-list-item-title">Jawan</span>
+                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m2.png" alt="">
+                            <span class="moviee-list-item-title">Kushi</span>
+                            <p class="moviee-list-item-desc">Romantic/Love</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m3.png" alt="">
+                            <span class="moviee-list-item-title">Jailer</span>
+                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m4.png" alt="">
+                            <span class="moviee-list-item-title">Nun</span>
+                            <p class="moviee-list-item-desc">Horror/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m5.png" alt="">
+                            <span class="moviee-list-item-title">Kick</span>
+                            <p class="moviee-list-item-desc">Action/Comedy</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m6.png" alt="">
+                            <span class="moviee-list-item-title">Her</span>
+                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m3.png" alt="">
+                            <span class="moviee-list-item-title">Jailer</span>
+                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m4.png" alt="">
+                            <span class="moviee-list-item-title">Nun</span>
+                            <p class="moviee-list-item-desc">Horror/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m5.png" alt="">
+                            <span class="moviee-list-item-title">Kick</span>
+                            <p class="moviee-list-item-desc">Action/Comedy</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m6.png" alt="">
+                            <span class="moviee-list-item-title">Her</span>
+                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </div>
+            </div>
+
+            <div class="premere-list-container">
+                <div class="premere-icon">
+                    <img src="Images/premere-icon.png" alt="">
+                    <div class="premere-title">
+                        <h3>PREMIERE</h3>
+                        <p>Watch new movies at home, every friday</p>
+                    </div>
+                </div>
+
+                <div class="moviee-list-wrapper">
+                    <div class="premiere-list">
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/p1.png" alt="">
+                            <span class="moviee-list-item-title">Jailer</span>
+                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/p2.png" alt="">
+                            <span class="moviee-list-item-title">Nun</span>
+                            <p class="moviee-list-item-desc">Horror/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/p3.png" alt="">
+                            <span class="moviee-list-item-title">Kick</span>
+                            <p class="moviee-list-item-desc">Action/Comedy</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/p5.png" alt="">
+                            <span class="moviee-list-item-title">Her</span>
+                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/p6.png" alt="">
+                            <span class="moviee-list-item-title">Jawan</span>
+                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="moviee-list-container">
+                <div class="moviee-list-title">
+                    RECOMENDED
+                </div>
+                <div class="moviee-list-wrapper">
+                    <div class="moviee-list">
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m3.png" alt="">
+                            <span class="moviee-list-item-title">Jailer</span>
+                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m4.png" alt="">
+                            <span class="moviee-list-item-title">Nun</span>
+                            <p class="moviee-list-item-desc">Horror/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m5.png" alt="">
+                            <span class="moviee-list-item-title">Kick</span>
+                            <p class="moviee-list-item-desc">Action/Comedy</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m6.png" alt="">
+                            <span class="moviee-list-item-title">Her</span>
+                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m1.png" alt="">
+                            <span class="moviee-list-item-title">Jawan</span>
+                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                        </div>
+                        <div class="moviee-list-item">
+                            <img class="moviee-list-item-img" src="Images/m2.png" alt="">
+                            <span class="moviee-list-item-title">Kushi</span>
+                            <p class="moviee-list-item-desc">Romantic/Love</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
