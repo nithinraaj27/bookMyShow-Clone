@@ -11,7 +11,6 @@
 
 <body>
 
-
     <div id="popup1" class="overlay">
         <div class="popup">
             <h2>Get Started</h2>
@@ -36,6 +35,55 @@
             </div>
             <div class="space"></div>
             <p class="bottom">I agree to the <span>Terms & Conditions</span> and <span>Privacy Policy.</span></p>
+        </div>
+    </div>
+
+    <div id="popup2" class="overlay">
+        <div class="popup2">
+            <div class="input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <p>Search for your city</p>
+            </div>
+            <p class="pop">Popular Cities</p>
+            <div class="cities">    
+                <div class="city">
+                    <img src="Images/mumbai.png" alt="">
+                    <p class="location">Mumbai</p>
+                </div>
+                <div class="city">
+                    <img src="Images/delhi.png" alt="">
+                    <p class="location">Delhi</p>
+                </div>
+                <div class="city">
+                    <img src="Images/bengaluru.png" alt="">
+                    <p class="location">Bengaluru</p>
+                </div>
+                <div class="city">
+                    <img src="Images/ahemedabad.png" alt="">
+                    <p class="location">Ahemedabad</p>
+                </div>
+                <div class="city">
+                    <img src="Images/chandigarh.png" alt="">
+                    <p class="location">Chandigarh</p>
+                </div>
+                <div class="city">
+                    <img src="Images/chennai.png" alt="">
+                    <p class="location">Chennai</p>
+                </div>
+                <div class="city">
+                    <img src="Images/pune.png" alt="">
+                    <p class="location">Pune</p>
+                </div>
+                <div class="city">
+                    <img src="Images/hyd.png" alt="">
+                    <p class="location">Hyderabad</p>
+                </div>
+                <div class="city">
+                    <img src="Images/kochi.png" alt="">
+                    <p class="location">Kochi</p>
+                </div>
+            </div>
+            <p class="vac">View All Cities</p>
         </div>
     </div>
 
@@ -131,13 +179,10 @@
             </div>
         </div>
         <div class="right">
-            <select id="location" name="location">
-                <option value="Pune">Pune</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Bangalore">Bangalore</option>
-                <option value="Chennai">Chennai</option>
-                <option value="Coimbatore">Coimbatore</option>
-            </select>
+            <div class="select">
+                <a href="#popup2"><p>Coimbatore</p></a>
+                <i  id="da" class="fa-solid fa-caret-down"></i>
+            </div>
             <button><a href="#popup1">Sign In</a></button>
             <i class="fa-solid fa-bars" onclick="openNav()"></i>
         </div>
@@ -178,7 +223,7 @@
         <div class="content-container">
             <div class="moviee-list-container">
                 <div class="moviee-list-title">
-                    NEW RELEASES
+                    New Releases
                 </div>
                 <div class="moviee-list-wrapper">
                     <div class="moviee-list">
@@ -239,39 +284,39 @@
 
             <div class="premere-list-container">
                 <div class="premere-icon">
-                    <img src="Images/premere-icon.png" alt="">
-                    <div class="premere-title">
-                        <h3>PREMIERE</h3>
-                        <p>Watch new movies at home, every friday</p>
-                    </div>
+                    <img src="Images/pre.png" alt="">
                 </div>
 
+                <div class="premere-title">
+                    <p class="title">Premieres</p>
+                    <p>Watch new movies at home, every friday</p>
+                </div>
                 <div class="moviee-list-wrapper">
                     <div class="premiere-list">
                         <div class="moviee-list-item">
                             <img class="moviee-list-item-img" src="Images/p1.png" alt="">
-                            <span class="moviee-list-item-title">Jailer</span>
-                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                            <span class="pmoviee-list-item-title">Jailer</span>
+                            <p class="pmoviee-list-item-desc">Action/Thriller</p>
                         </div>
                         <div class="moviee-list-item">
                             <img class="moviee-list-item-img" src="Images/p2.png" alt="">
-                            <span class="moviee-list-item-title">Nun</span>
-                            <p class="moviee-list-item-desc">Horror/Thriller</p>
+                            <span class="pmoviee-list-item-title">Nun</span>
+                            <p class="pmoviee-list-item-desc">Horror/Thriller</p>
                         </div>
                         <div class="moviee-list-item">
                             <img class="moviee-list-item-img" src="Images/p3.png" alt="">
-                            <span class="moviee-list-item-title">Kick</span>
-                            <p class="moviee-list-item-desc">Action/Comedy</p>
+                            <span class="pmoviee-list-item-title">Kick</span>
+                            <p class="pmoviee-list-item-desc">Action/Comedy</p>
                         </div>
                         <div class="moviee-list-item">
                             <img class="moviee-list-item-img" src="Images/p5.png" alt="">
-                            <span class="moviee-list-item-title">Her</span>
-                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                            <span class="pmoviee-list-item-title">Her</span>
+                            <p class="pmoviee-list-item-desc">Action/Thriller</p>
                         </div>
                         <div class="moviee-list-item">
                             <img class="moviee-list-item-img" src="Images/p6.png" alt="">
-                            <span class="moviee-list-item-title">Jawan</span>
-                            <p class="moviee-list-item-desc">Action/Thriller</p>
+                            <span class="pmoviee-list-item-title">Jawan</span>
+                            <p class="pmoviee-list-item-desc">Action/Thriller</p>
                         </div>
                     </div>
                 </div>
@@ -279,7 +324,7 @@
             
             <div class="moviee-list-container">
                 <div class="moviee-list-title">
-                    RECOMENDED
+                    Recommended Moviees
                 </div>
                 <div class="moviee-list-wrapper">
                     <div class="moviee-list">

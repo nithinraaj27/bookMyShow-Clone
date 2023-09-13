@@ -10,6 +10,165 @@
 </head>
 
 <body>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Get Started</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="button">
+                <img src="Images/google.png" alt="">
+                <p>Continue with Google</p>
+            </div>
+            <div class="button">
+                <img src="Images/email.png" alt="">
+                <p>Continue with Email</p>
+            </div> 
+            <div class="button">
+                <img src="Images/apple.png" alt="">
+                <p>Continue with Apple</p>
+            </div>  
+            <p>OR</p>
+            <div class="number">
+                <img src="Images/india.png" alt="">
+                <p>+91</p>
+                <input type="tel" placeholder="Continue with mobile number">
+            </div>
+            <div class="space"></div>
+            <p class="bottom">I agree to the <span>Terms & Conditions</span> and <span>Privacy Policy.</span></p>
+        </div>
+    </div>
+
+    <div id="popup2" class="overlay">
+        <div class="popup2">
+            <div class="input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <p>Search for your city</p>
+            </div>
+            <p class="pop">Popular Cities</p>
+            <div class="cities">    
+                <div class="city">
+                    <img src="Images/mumbai.png" alt="">
+                    <p class="location">Mumbai</p>
+                </div>
+                <div class="city">
+                    <img src="Images/delhi.png" alt="">
+                    <p class="location">Delhi</p>
+                </div>
+                <div class="city">
+                    <img src="Images/bengaluru.png" alt="">
+                    <p class="location">Bengaluru</p>
+                </div>
+                <div class="city">
+                    <img src="Images/ahemedabad.png" alt="">
+                    <p class="location">Ahemedabad</p>
+                </div>
+                <div class="city">
+                    <img src="Images/chandigarh.png" alt="">
+                    <p class="location">Chandigarh</p>
+                </div>
+                <div class="city">
+                    <img src="Images/chennai.png" alt="">
+                    <p class="location">Chennai</p>
+                </div>
+                <div class="city">
+                    <img src="Images/pune.png" alt="">
+                    <p class="location">Pune</p>
+                </div>
+                <div class="city">
+                    <img src="Images/hyd.png" alt="">
+                    <p class="location">Hyderabad</p>
+                </div>
+                <div class="city">
+                    <img src="Images/kochi.png" alt="">
+                    <p class="location">Kochi</p>
+                </div>
+            </div>
+            <p class="vac">View All Cities</p>
+        </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <div class="top-div">
+            <p>Hey!</p>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+        <div class="bot-div">
+            <img src="Images/profile.png" alt="">
+            <p>Unlock special offers & great benefits</p>
+            <button>Login / Register</button>
+        </div>
+        <div class="container-data">
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-regular fa-bell"></i>
+                    <p style="color: black;">Notification</p>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="inner-desc">
+                        <p>Notification</p>
+                        <p class="desc">View all your bookings & purchases</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-solid fa-bag-shopping" style="color: black;"></i>
+                    <div class="inner-desc">
+                        <p style="color: black;">Your Orders</p>
+                        <p class="desc" style="color: black;">Rented & Purchased Moviees</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-solid fa-message"></i>
+                    <div class="inner-desc">
+                        <p>Play Credit Card</p>
+                        <p class="desc">View your play credit card details and offers</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <div class="inner-desc">
+                        <p>Help & support</p>
+                        <p class="desc">View Commonly asked queries and chat</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-solid fa-gift" style="color: black;"></i>
+                    <div class="inner-desc">
+                        <p style="color: black;">Reward</p>
+                        <p class="desc" style="color: black;">View your reward and Unlock new ones</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+
+            <div class="container-content">
+                <div class="container-left">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="inner-desc">
+                        <p>Account & Settings</p>
+                        <p class="desc">Locations, Payment, Permission & More</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+
     <nav class="fnav">
         <div class="left">
             <img src="Images/logo.png" alt="">
@@ -19,15 +178,12 @@
             </div>
         </div>
         <div class="right">
-            <select id="location" name="location">
-                <option value="Pune">Pune</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Bangalore">Bangalore</option>
-                <option value="Chennai">Chennai</option>
-                <option value="Coimbatore">Coimbatore</option>
-            </select>
-            <button>Sign In</button>
-            <i class="fa-solid fa-bars"></i>
+            <div class="select">
+                <a href="#popup2"><p>Coimbatore</p></a>
+                <i  id="da" class="fa-solid fa-caret-down"></i>
+            </div>
+            <button><a href="#popup1">Sign In</a></button>
+            <i class="fa-solid fa-bars" onclick="openNav()"></i>
         </div>
     </nav>
 
@@ -52,7 +208,7 @@
 
     <div class="booking-top">
         <div class="movie-title">
-            <p>Jailer - Tamil</p>
+            <p>Jailer(Tamil) - Tamil</p>
         </div>
         <div class="buttons">
             <button class="ua">UA</button>
@@ -87,10 +243,10 @@
                         <div class="overSelect"></div>
                     </div>
                     <div id="checkboxes">
-                        <label for="one" class="dp"><input type="checkbox" id="one" />Morning</label>
-                        <label for="two" class="dp"><input type="checkbox" id="two" />Afternoon</label>
-                        <label for="three" class="dp"><input type="checkbox" id="three" />Evening</label>
-                        <label for="four" class="dp"><input type="checkbox" id="four" />Night</label>
+                        <label for="one" class="dp"><input type="checkbox" id="one"/>Morning</label>
+                        <label for="two" class="dp"><input type="checkbox" id="two"/>Afternoon</label>
+                        <label for="three" class="dp"><input type="checkbox" id="three"/>Evening</label>
+                        <label for="four" class="dp"><input type="checkbox" id="four"/>Night</label>
                     </div>
                 </div>
             </form>
@@ -110,7 +266,9 @@
         <div class="theatre-left">
             <i class="fa-regular fa-heart" id="heart"></i>
             <div class="theatre-name">
-                <p>AAA Cinimas: CBE</p>
+                <div class="moviee-name">
+                    <p>Ambal Complex (Senthil Kumaran)</p>
+                </div>
                 <div class="name-desc">
                     <div class="m-t">
                         <i class="fa-solid fa-mobile-screen-button"></i>
@@ -131,23 +289,21 @@
             <div class="timings">
                 <div class="timing">
                     <p>10:15 AM</p>
-                    <p>LASER DOLBY ATMOS</p>
                 </div>
                 <div class="timing">
                     <p>01:15 PM</p>
-                    <p>LASER DOLBY ATMOS</p>
                 </div>
                 <div class="timing">
                     <p>07:15 PM</p>
-                    <p>LASER DOLBY ATMOS</p>
                 </div>
                 <div class="timing">
                     <p>10:15 PM</p>
-                    <p>LASER DOLBY ATMOS</p>
                 </div>
             </div>
-            <span class="can"></span>
-            <p>Non-cancellable</p>
+            <div class="nc">
+                <span class="can"></span>
+                <p>Non-cancellable</p>
+            </div>
         </div>
     </div>
 
@@ -155,7 +311,7 @@
         <div class="theatre-left">
             <i class="fa-regular fa-heart" id="heart"></i>
             <div class="theatre-name">
-                <p>Karpagam Cinimas: CBE</p>
+                <p>Gokulam Cinemas A/C 2K</p>
                 <div class="name-desc">
                     <div class="m-t">
                         <i class="fa-solid fa-mobile-screen-button"></i>
@@ -172,23 +328,15 @@
             <div class="timings">
                 <div class="timing">
                     <p>10:15 AM</p>
-                    <p>LASER DOLBY ATMOS</p>
                 </div>
                 <div class="timing">
                     <p>01:15 PM</p>
-                    <p>LASER DOLBY ATMOS</p>
-                </div>
-                <div class="timing">
-                    <p>07:15 PM</p>
-                    <p>LASER DOLBY ATMOS</p>
-                </div>
-                <div class="timing">
-                    <p>10:15 PM</p>
-                    <p>LASER DOLBY ATMOS</p>
                 </div>
             </div>
-            <span class="can"></span>
-            <p>Non-cancellable</p>
+            <div class="nc">
+                <span class="can"></span>
+                <p>Non-cancellable</p>
+            </div>
         </div>
     </div>
 
@@ -196,7 +344,7 @@
         <div class="theatre-left">
             <i class="fa-regular fa-heart" id="heart"></i>
             <div class="theatre-name">
-                <p>KG Cinimas: CBE</p>
+                <p>Kalpana Theatre 4K Dolby Atmos</p>
                 <div class="name-desc">
                     <div class="m-t">
                         <i class="fa-solid fa-mobile-screen-button"></i>
@@ -217,23 +365,27 @@
             <div class="timings">
                 <div class="timing">
                     <p>10:15 AM</p>
-                    <p>LASER DOLBY ATMOS</p>
                 </div>
                 <div class="timing">
                     <p>01:15 PM</p>
-                    <p>LASER DOLBY ATMOS</p>
                 </div>
                 <div class="timing">
                     <p>07:15 PM</p>
-                    <p>LASER DOLBY ATMOS</p>
                 </div>
                 <div class="timing">
                     <p>10:15 PM</p>
-                    <p>LASER DOLBY ATMOS</p>
+                </div>
+                <div class="timing">
+                    <p>07:15 PM</p>
+                </div>
+                <div class="timing">
+                    <p>10:15 PM</p>
                 </div>
             </div>
-            <span class="can"></span>
-            <p>Non-cancellable</p>
+            <div class="nc">
+                <span class="can"></span>
+                <p>Non-cancellable</p>
+            </div>
         </div>
     </div>
 
@@ -241,7 +393,7 @@
         <div class="theatre-left">
             <i class="fa-regular fa-heart" id="heart"></i>
             <div class="theatre-name">
-                <p>Govindam - Theatres</p>
+                <p>Karpagam Theatres 4K Dolby Atmos</p>
                 <div class="name-desc">
                     <div class="m-t">
                         <i class="fa-solid fa-mobile-screen-button"></i>
@@ -262,11 +414,12 @@
             <div class="timings">
                 <div class="timing">
                     <p>10:15 AM</p>
-                    <p>LASER DOLBY ATMOS</p>
                 </div>
             </div>
-            <span class="can"></span>
-            <p>Non-cancellable</p>
+            <div class="nc">
+                <span class="can"></span>
+                <p>Non-cancellable</p>
+            </div>
         </div>
     </div>
 
@@ -295,15 +448,15 @@
             <div class="timings">
                 <div class="timing">
                     <p>10:15 AM</p>
-                    <p>LASER DOLBY ATMOS</p>
                 </div>
                 <div class="timing">
                     <p>01:15 PM</p>
-                    <p>LASER DOLBY ATMOS</p>
                 </div>
             </div>
-            <span class="can"></span>
-            <p>Non-cancellable</p>
+            <div class="nc">
+                <span class="can"></span>
+                <p>Non-cancellable</p>
+            </div>
         </div>
     </div>
     <script>

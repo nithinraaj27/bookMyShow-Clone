@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins&family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;1,400&display=swap');
 
 body {
     font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     overflow-x: hidden;
 }
@@ -110,7 +112,7 @@ hr
 .popup h2
 {
     font-size: 18px;
-}
+}   
 
 .popup .button{
     display: flex;
@@ -120,6 +122,39 @@ hr
     align-items: center;
     border-radius: 2px;
     cursor: pointer;
+}
+
+.popup2 .pop
+{
+    margin-top: 40px;
+    font-size: 14px;
+    color: #333;
+    letter-spacing: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: none;
+}
+.input
+{
+    display: flex;
+    height: 45px;
+    align-items: center;
+    box-shadow: 0.1px 0.1px 1px grey;
+    padding-left: 20px;
+}
+
+.input i
+{
+    font-size: 15px;
+    color: gray;
+}
+
+.input p
+{
+    margin-left: 20px;
+    font-size: 10px;
+    color: gray;
+    font-weight: 500;
 }
 
 .button img
@@ -142,6 +177,24 @@ hr
     color: gray;
 }
 
+.popup2
+{
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 80%;
+    height: 45%;
+    position: relative;
+    transition: all 1s ease-in-out;
+    text-align: center;
+}
+
+.cities
+{
+    display: flex;
+    justify-content: space-between;
+}
 .number
 {
     display: flex;
@@ -197,6 +250,49 @@ hr
     font-size: 10px;
 }
 
+.city
+{
+    height: 120px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.city img
+{
+    height: 65px;
+    width: 65px;
+    margin: 0;
+    padding: 0;
+    color: gray;
+}
+
+.city p
+{
+    margin: 0;
+    padding: 0;
+}
+
+.vac
+{
+    font-size: 14px;
+    color: #dc3558;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 15px;
+}
+
+.location
+{
+    color: #666;
+    font-size: 14px;
+    max-width: 110px;
+    word-break: break-word;
+    text-align: center;
+}
 .bot-div
 {
     display: flex;
@@ -233,6 +329,11 @@ hr
     width: 40px;
 }
 
+.container p
+{
+    padding: 0;
+    margin: 0;
+}
 .container-content
 {
     display: flex;
@@ -360,34 +461,58 @@ hr
 
 
 .fnav .right {
+    width: 250px;
     display: flex;
+    align-items: center;
     margin-top: 11px;
-    margin-right: 50px;
+    margin-right: 20px;
     justify-content: space-between;
 }
 
-.right select {
-    width: 100px;
+.right .select {
+    width: 110px;
     height: 33px;
-    margin: 0 25px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: transparent;
     outline: none;
     border: none;
     color: white;
 }
 
-.right select option {
-    margin: 10px;
-    background-color: rgba(42, 42, 68);
+.right .select p
+{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(204, 204, 204);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    cursor: pointer;
 }
 
+#da
+{
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+
 .right button {
-    width: 70px;
-    height: 30px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    background-color: rgba(259, 59, 91);
+    color: rgb(255, 255, 255);
+    background-color: rgb(248, 68, 100);
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    width: 67px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid rgb(248, 68, 100);
+    display: block;
 }
 
 .right a
@@ -398,9 +523,9 @@ hr
 
 .right i {
     color: white;
-    margin-left: 25px;
+    margin-left: 2px;
     margin-top: 3px;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .snav {
@@ -421,6 +546,9 @@ hr
 
 .s-left p {
     margin: 0 14px;
+    font-size: 14px;
+    color: rgb(204, 204, 204);;
+    font-family: 'Roboto', sans-serif;
 }
 
 .s-right p {
@@ -507,23 +635,76 @@ hr
     cursor: pointer;
 }
 
-.moviee-list-item-title {
-    margin: 5px;
+.pmoviee-list-item-title
+{
+    margin: 0px 0px 4px;
+    word-break: break-word;
+    color: white;
+    font-family: Roboto;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
+    line-height: 1.33;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.moviee-list-item-title {
+    margin: 0px 0px 4px;
+    word-break: break-word;
+    color: rgb(34, 34, 34);
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.33;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .moviee-list-item-desc {
-    margin: 5px;
-    font-size: 14px;
-    font-weight: 400;
+    margin: 0px;
+    word-break: break-word;
+    color: rgb(102, 102, 102);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.pmoviee-list-item-desc {
+    margin: 0px;
+    word-break: break-word;
+    color: rgb(255, 255, 255);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .moviee-list-title {
     margin-top: 10px;
     margin-left: 20px;
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(51, 51, 51);
+    font-family: 'Roboto', sans-serif;
+    word-break: break-word;
+
 }
 
 .moviee-list-wrapper {
@@ -547,10 +728,10 @@ hr
 }
 
 .premere-list-container {
-    height: 520px;
+    height: 620px;
     width: 100vw;
     margin: 0;
-    background-color: rgb(3, 68, 247);
+    background-color: rgb(43, 49, 72);
 }
 
 .premere-icon {
@@ -562,20 +743,35 @@ hr
 }
 
 .premere-icon img {
-    height: 70px;
-    width: 70px;
     margin-top: 35px;
     margin-left: 35px;
 }
 
-.premere-title h3 {
-    margin-top: 40px;
-    color: white;
+.premere-title p
+{
+    margin: 0;
+    padding: 0;
+}
+.premere-title .title{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 0;
+    word-break: break-word;
+    color: rgb(255, 255, 255);
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.17;
 }
 
 .premere-title p {
-    font-size: 12px;
-    color: white;
+    margin-left: 50px;
+    word-break: break-word;
+    color: rgb(255, 255, 255);
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.43;
 }
 
 .premiere-list {
@@ -584,7 +780,7 @@ hr
 }
 
 .booking-top {
-    height: 130px;
+    height: 170px;
     background-color: rgba(42, 42, 68);
     display: flex;
     justify-content: flex-end;
@@ -592,10 +788,19 @@ hr
 }
 
 .movie-title {
-    font-size: 25px;
-    color: white;
+    font-size: 36px;
+    color: #f4f4f4;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: -webkit-max-content;
+    width: max-content;
+    max-width: 70%;
     margin-left: 25px;
-    font-weight: 800;
+    font-weight: 400;
+    height: 85px;
+    align-items: center;
 }
 
 .buttons {
@@ -613,17 +818,19 @@ hr
     margin-right: 10px;
     color: white;
     font-size: 10px;
+    margin-bottom: 0;
 }
 
 .desc-button {
-    border-radius: 5px;
-    padding: 3px;
-    border: 1px solid grey;
-    outline: whites;
-    background-color: transparent;
-    margin: 0 10px;
-    color: white;
-    font-size: 8px;
+    font-size: 10px;
+    color: rgba(255,255,255,.5);
+    background: 0 0;
+    padding: 1px 5px;
+    border-radius: 11px;
+    border: 1px solid rgba(255,255,255,.5);
+    margin-right: 10px;
+    text-transform: uppercase;
+    display: inline-block;
 }
 
 .cal-left {
@@ -698,13 +905,16 @@ hr
     display: flex;
     justify-content: start;
     align-items: start;
-    font-size: small;
-    font-size: 20px;
     padding: 25px 55px 30px 0;
     border-bottom: 3px solid red;
+    font-weight: 9  00;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
 }
 
 .cal-right select {
+    margin-top: 10px;
     background-color: transparent;
     border: none;
     margin-left: 20px;
@@ -801,6 +1011,7 @@ hr
     display: flex;
     align-items: center;
     padding-top: 10px;
+    margin-bottom: 25px;
 }
 
 
@@ -810,15 +1021,27 @@ hr
 }
 
 #heart {
-    color: grey;
-    font-size: 25px;
+    stroke: #999999;
+    fill: #FFFFFF;
+    color: #999999;
+    stroke-width: 5px;
+    cursor: pointer;
+    font-size: 5    px;
     padding-left: 40px;
     padding-top: 14px;
+    margin-bottom: 5px;
 }
 
+.moviee-name
+{
+    width: 150px;
+}
 .theatre-name p {
+    color: #333333;
+    width: 250px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
     font-weight: bold;
-    font-size: 18px;
     padding-left: 20px;
 }
 
@@ -827,55 +1050,80 @@ hr
 }
 
 .m-t {
-
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    color: green;
+    text-align: center;
+    justify-content: space-between;
+    width: 65px;
+
 }
 
 .m-t i {
     height: 10px;
     width: 10px;
-    padding-left: 20px;
-    padding-bottom: 5px;
+    size: 12px;
+    color: #49ba8e;
+    margin-bottom: 8px;
 }
 
 .m-t p {
     font-size: 12px;
+    color: #49ba8e;
+    font-size: extract(12px, 17px, 400, 0);
+    cursor: default;
+    font-weight: 400;
+    padding: 0;
 }
 
 .f-b {
     display: flex;
     align-items: center;
+    width: 130px;
     justify-content: space-around;
-    color: rgb(189, 189, 30);
+    color: #ffa426;
+    margin-left: 20px;
 }
 
 .f-b i {
     height: 10px;
     width: 10px;
-    padding-left: 20px;
-    padding-bottom: 5px;
+    size: 12px;
+    color: #49ba8e;
+    margin-bottom: 8px;
+    color: #ffa426;
 }
 
 .f-b p {
-    font-size: 12px;
+    color: #ffa426;
+    font-size: extract(12px, 17px, 400, 0);
+    cursor: default;
+    font-weight: 400;
+    padding: 0;
 }
 
 .info {
     display: flex;
-    align-items: start;
-    margin-left: 35px;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    margin-left: 5px;
     color: grey;
 }
 
 .info i {
-    padding-top: 17px;
+    width: 16px;
+    color: #7d7d7d; 
+    height: 16px;
 }
 
 .info p {
     margin-left: 10px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #7d7d7d;
+    margin-left: 4px;
 }
 
 .theatre-right {
@@ -887,30 +1135,50 @@ hr
 .timings {
     display: flex;
     cursor: pointer;
+    width: 750px;
 }
 
 .timing {
-    width: 200px;
-    border: 0.5px solid grey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3px;
     margin: 10px;
-    color: rgb(131, 90, 3);
+    border: 1px solid #999;
+    color: #4abd5d;
+    padding: 2px;
+    border-radius: 4px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
 }
 
 .timing p {
-    font-size: 10px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    color: #4abd5d;
+
+}
+
+.nc
+{
+    display: flex;
+    align-items: center ;
+    width: 150px;
+}
+
+.nc p
+{
+    padding: 0;
+    margin: 0;
 }
 
 .can {
     background-color: orange;
     border-radius: 50%;
-    height: 15px;
-    width: 15px;
-    margin-right: 5px;
-    margin-bottom: 3px;
+    height: 7px;
+    width: 7px;
+    margin-left: 10px;
 }
 
 .theatre-right p {
